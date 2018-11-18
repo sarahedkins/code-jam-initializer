@@ -1,0 +1,31 @@
+const TEST_SET_SIZE = "small";
+const ATTEMPT_NUM = "1";
+const INPUT_FILE_NAME = `A-${TEST_SET_SIZE}-attempt${ATTEMPT_NUM}.in`;
+
+const fs = require('fs');
+const fileContent = fs.readFileSync(INPUT_FILE_NAME, 'utf-8');
+console.log('Input file loaded');
+
+const getResult = (arr) => {
+  let answer = 'Result not update';
+  return answer;
+}
+
+function resolve(data) {
+    var res = '';
+    const numberOfTestCases = parseInt(data[0], 10);
+    var caseDataIndex = 1;
+    for (let i = 1; i <= numberOfTestCases; i++) {
+        const numberOfIntegersInArray = data[caseDataIndex++];
+        const integerBuffer = data[caseDataIndex++];
+        const arr = integerBuffer.split(" ").map(str => parseInt(str));
+        const result = getResult(arr);
+        console.log("result", result);
+        res += `Case #${i}: ${result}\r\n`;
+    }
+    return res;
+}
+
+fs.writeFileSync(`${TEST_SET_SIZE}_${ATTEMPT_NUM}_out.txt`,
+  resolve(fileContent.split('\n')), 'utf-8');
+console.log(`Output file saved in ${TEST_SET_SIZE}_${ATTEMPT_NUM}_out.txt`);
