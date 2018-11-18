@@ -8,7 +8,8 @@ This is a command line tool that generates a directory with a subfolder for each
 Clone the repo. Run `npm install -g --prefix </path/where/you/keep/npm/globals>`
 
 ## To use
-On the command line, navigate to a directory where you want to generate code jam files and enter `jam-init --type <type> --round <round> --year <year> [--num <num>]`
+On the command line, navigate to a directory where you want to generate code jam files and enter
+`jam-init --type <type> --round <round> --year <year> [--num <num>]`
 
 #### Parameters
 `type` is the type of code jam, such as "kickstart"  
