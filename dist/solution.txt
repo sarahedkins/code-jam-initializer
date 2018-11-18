@@ -7,7 +7,7 @@ const fileContent = fs.readFileSync(INPUT_FILE_NAME, 'utf-8');
 console.log('Input file loaded');
 
 const getResult = (arr) => {
-  let answer = 'Result not update';
+  let answer = "TODO";
   return answer;
 }
 
